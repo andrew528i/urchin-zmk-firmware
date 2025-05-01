@@ -138,7 +138,7 @@
 			&lt MOUSE Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P
 			&kp A       &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L   &kp SEMI
 			&kp Z       &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-							            &mo LOWER &lt MOD_LOWER SPACE       &lt MOD_RAISE ENTER &mo RAISE
+							            &mo LOWER &kp SPACE       &lt MOD_RAISE ENTER &mo RAISE
 			>;
 		};
 
@@ -207,9 +207,9 @@
 		mod_raise {
 				label = "Mod Raise";
 				bindings = <
-        &trans  &trans  &trans  &trans  &trans      &trans  &trans    &trans     &trans    &trans
-        &trans  &trans  &trans  &trans  &trans      &trans  &kp RGUI  &kp RSHFT  &kp RALT  &kp RCTRL
-        &trans  &trans  &trans  &trans  &trans      &trans  &trans    &trans     &trans    &trans
+        &trans     &trans    &trans     &trans    &trans      &trans  &trans    &trans     &trans    &trans
+        &kp LCTRL  &kp LALT  &kp LSHFT  &kp LGUI  &trans      &trans  &kp RGUI  &kp RSHFT  &kp RALT  &kp RCTRL
+        &trans     &trans    &trans     &trans    &trans      &trans  &trans    &trans     &trans    &trans
                                 &trans  &trans      &trans  &trans
 				>;
 		};
