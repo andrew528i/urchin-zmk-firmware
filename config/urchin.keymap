@@ -33,35 +33,37 @@
 / {
 	behaviors {
     hrml: hrm_left {
-				compatible = "zmk,behavior-hold-tap";
-				#binding-cells = <2>;
-				flavor = "tap-preferred";
-			  tapping-term-ms = <0>;            /* no delay before registering a tap on release */
-			  quick-tap-ms = <0>;              /* immediate “quick tap” */
-				bindings = <&kp>, <&kp>;
-				hold-trigger-key-positions = < 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33 10 11 12 13>;
-				global-quick-tap;
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <150>;            /* no delay before registering a tap on release */
+			quick-tap-ms = <125>;              /* immediate “quick tap” */
+			bindings = <&kp>, <&kp>;
+			hold-trigger-key-positions = < 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33 10 11 12 13>;
+			hold-trigger-on-release;
+			global-quick-tap;
 		};
 
     hrmr: hrm_right {
 				compatible = "zmk,behavior-hold-tap";
 				#binding-cells = <2>;
 				flavor = "tap-preferred";
-			  tapping-term-ms = <0>;            /* no delay before registering a tap on release */
-			  quick-tap-ms = <0>;              /* immediate “quick tap” */
+			  tapping-term-ms = <150>;            /* no delay before registering a tap on release */
+			  quick-tap-ms = <125>;              /* immediate “quick tap” */
 				bindings = <&kp>, <&kp>;
 				hold-trigger-key-positions = < 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33 16 17 18 19>;
+			hold-trigger-on-release;
 				global-quick-tap;
 		};
 
-		enter_ht: enter-ht-behavior {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      flavor = "tap-preferred";         /* always prefer tap when you just press-release */
-			tapping-term-ms = <0>;            /* no delay before registering a tap on release */
-			quick-tap-ms = <0>;               /* immediate “quick tap” */
-      bindings = <&kp ENTER>, <&mo RAISE>;  /* tap=Enter, hold=raise layer */
-    };
+		// enter_ht: enter-ht-behavior {
+  //     compatible = "zmk,behavior-hold-tap";
+  //     #binding-cells = <2>;
+  //     flavor = "tap-preferred";         /* always prefer tap when you just press-release */
+		// 	tapping-term-ms = <0>;            /* no delay before registering a tap on release */
+		// 	quick-tap-ms = <0>;               /* immediate “quick tap” */
+  //     bindings = <&kp ENTER>, <&mo RAISE>;  /* tap=Enter, hold=raise layer */
+  //   };
 	};
 
 	combos {
@@ -145,7 +147,7 @@
 			&lt MOUSE Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P
 			&kp A       &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L   &kp SEMI
 			&kp Z       &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-							            &mo LOWER &kp SPACE       &enter_ht &mo RAISE
+							            &mo LOWER &kp SPACE       &kp ENTER &mo RAISE
 			>;
 		};
 
@@ -163,8 +165,8 @@
 			label = "Lower";
 			bindings = <
 			&kp EXCL  &kp AT  &kp HASH &kp DLLR &kp PRCNT     &kp CARET  &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR
-      // &hrml LCTRL F1 &hrml LALT F2 &hrml LSHFT F3 &hrml LGUI F4 &kp F5        &kp F6     &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC
-      &kp F1    &kp F2  &kp F3   &kp F4   &kp F5        &kp F6     &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC
+      &hrml LCTRL F1 &hrml LALT F2 &hrml LSHFT F3 &hrml LGUI F4 &kp F5        &kp F6     &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC
+      // &kp F1    &kp F2  &kp F3   &kp F4   &kp F5        &kp F6     &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC
       &kp F7    &kp F8  &kp F9   &kp F10  &kp F11       &kp F12    &none      &none     &none     &none
 													&trans &trans	      &trans &trans
 			>;
@@ -174,8 +176,8 @@
 			label = "Raise";
 			bindings = <
 		  &kp N1  &kp N2      &kp N3        &kp N4       &kp N5     &kp N6  &kp N7      &kp N8     &kp N9    &kp N0
-      // &none   &kp C_PREV  &kp C_PP      &kp C_NEXT   &none      &none   &hrmr RGUI MINUS  &hrmr RSHFT EQUAL  &hrmr RALT LBKT  &hrmr RCTRL RBKT
-      &none   &kp C_PREV  &kp C_PP      &kp C_NEXT   &none      &none   &kp MINUS   &kp EQUAL  &kp LBKT  &kp RBKT
+      &none   &kp C_PREV  &kp C_PP      &kp C_NEXT   &none      &none   &hrmr RGUI MINUS  &hrmr RSHFT EQUAL  &hrmr RALT LBKT  &hrmr RCTRL RBKT
+      // &none   &kp C_PREV  &kp C_PP      &kp C_NEXT   &none      &none   &kp MINUS   &kp EQUAL  &kp LBKT  &kp RBKT
       &none   &none       &kp C_VOL_DN  &kp C_VOL_UP &none      &none   &none       &none      &kp DQT   &kp SQT
 													&trans &trans	      &trans &trans
 			>;
