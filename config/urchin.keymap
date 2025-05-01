@@ -79,46 +79,46 @@
 			bindings = <&kp LC(SPACE)>;
 			key-positions = <19 31>;
 		};
-		combo_lgui {
-			slow-release;
-			bindings = <&kp LGUI>;
-			key-positions = <31 13>;
-		};
-		combo_lshft {
-			slow-release;
-			bindings = <&kp LSHFT>;
-			key-positions = <31 12>;
-		};
-		combo_lalt {
-			slow-release;
-			bindings = <&kp LALT>;
-			key-positions = <31 11>;
-		};
-		combo_lctrl {
-			slow-release;
-			bindings = <&kp LCTRL>;
-			key-positions = <31 10>;
-		};
-		combo_rgui {
-			slow-release;
-			bindings = <&kp RGUI>;
-			key-positions = <32 16>;
-		};
-		combo_rshft {
-			slow-release;
-			bindings = <&kp LSHFT>;
-			key-positions = <32 17>;
-		};
-		combo_ralt {
-			slow-release;
-			bindings = <&kp LALT>;
-			key-positions = <32 18>;
-		};
-		combo_rctrl {
-			slow-release;
-			bindings = <&kp LCTRL>;
-			key-positions = <32 19>;
-		};
+		// combo_lgui {
+		// 	slow-release;
+		// 	bindings = <&kp LGUI>;
+		// 	key-positions = <31 13>;
+		// };
+		// combo_lshft {
+		// 	slow-release;
+		// 	bindings = <&kp LSHFT>;
+		// 	key-positions = <31 12>;
+		// };
+		// combo_lalt {
+		// 	slow-release;
+		// 	bindings = <&kp LALT>;
+		// 	key-positions = <31 11>;
+		// };
+		// combo_lctrl {
+		// 	slow-release;
+		// 	bindings = <&kp LCTRL>;
+		// 	key-positions = <31 10>;
+		// };
+		// combo_rgui {
+		// 	slow-release;
+		// 	bindings = <&kp RGUI>;
+		// 	key-positions = <32 16>;
+		// };
+		// combo_rshft {
+		// 	slow-release;
+		// 	bindings = <&kp LSHFT>;
+		// 	key-positions = <32 17>;
+		// };
+		// combo_ralt {
+		// 	slow-release;
+		// 	bindings = <&kp LALT>;
+		// 	key-positions = <32 18>;
+		// };
+		// combo_rctrl {
+		// 	slow-release;
+		// 	bindings = <&kp LCTRL>;
+		// 	key-positions = <32 19>;
+		// };
 	};
 
 	conditional_layers {
@@ -138,7 +138,7 @@
 			&lt MOUSE Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P
 			&kp A       &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L   &kp SEMI
 			&kp Z       &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-							            &mo LOWER &kp SPACE       &kp ENTER &mo RAISE
+							            &mo LOWER &lt MOD_LOWER SPACE       &lt MOD_RAISE ENTER &mo RAISE
 			>;
 		};
 
